@@ -1,0 +1,19 @@
+extends extends/layout
+
+block content
+    main.main
+    section.squares
+        .squares__wrapper
+            h1.squares__title Collect squares game
+            .squares__header
+                h2.squares__time-header Game time: 
+                    span.squares__time 5.0
+                h2.squares__result-header.hide Your result: 
+                    span.squares__result
+            .squares__content
+                button.squares__start-btn.btn Play
+                .squares__game
+            .squares__footer
+                .squares__input
+                    label(for='squares__game-time') Game time, (sec) 
+                    input#squares__game-time(type='number' min='5' step='1' value='5')

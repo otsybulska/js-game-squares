@@ -1,0 +1,110 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    outline: transparent;
+}
+
+body {
+    margin: 0;
+    background-color: $background-color;
+    color: $text;
+    font-family: $font-family;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    position: absolute;
+    z-index: 10;
+    display: inline-block;
+    padding: 1rem 3rem;
+    color: $text;
+    font-family: $font-family;
+    font-size: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+    background-color: $accent;
+    border: transparent;
+    border-radius: 3rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    will-change: transform;
+    touch-action: manipulation;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    &:disabled {
+        background: $silver !important;
+        border: 1px solid $silver;
+        color: $text;
+        cursor: not-allowed;
+    }
+}
+
+input {
+    display: block;
+    width: 100%;
+    max-height: 2.5rem;
+    padding: 0.7rem 1rem;
+    font-family: $font-family;
+    color: $text;
+    background: $white none;
+    border: 1px solid $silver;
+    border-radius: 5px;
+}
+
+.hide {
+    display: none !important;
+}
+
+img {
+    max-width: 100%;
+}
