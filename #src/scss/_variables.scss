@@ -6,21 +6,6 @@ $background-color: linear-gradient(to bottom, #fad7a1, #e96d71);
 
 $font-family: "Roboto", sans-serif;
 
-$transition: 0.3s ease-in-out;
-
-// Mobile first
-$breakpoints: (
-    // Smartphones in portrait mode, less than 576px
-    "sm": ("(min-width: 576px)"),
-    // Smartphones in landscape mode
-    "md": ("(min-width: 768px)"),
-    // Tablets in portrait mode
-    "lg": ("(min-width: 992px)"),
-    // Tablets in portrait mode and Desktops
-    "xl": ("(min-width: 1200px)"),
-    // Large desktops
-);
-
 // Desktop first
 $breakpoints: (
     // Desktop monitors 1366px and above

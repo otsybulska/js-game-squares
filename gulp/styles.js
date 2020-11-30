@@ -22,7 +22,7 @@ module.exports = function styles() {
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer({ cascade: false }))
-        .pipe(shorthand())
+        //.pipe(shorthand())
         .pipe(csso({
             restructure: false,
             debug: true

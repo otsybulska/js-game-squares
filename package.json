@@ -1,7 +1,7 @@
 {
-  "name": "squares-game",
+  "name": "js-game-squares",
   "version": "1.0.0",
-  "description": "squares-game",
+  "description": "js-game-squares",
   "author": "Olena Tsybulska",
   "main": "gulpfile.js",
   "scripts": {

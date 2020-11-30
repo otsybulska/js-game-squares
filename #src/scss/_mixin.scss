@@ -8,33 +8,6 @@
     }
 }
 
-@mixin layer($position: absolute, $top: 0, $left: $top, $bottom: $top, $right: $top) {
-    content: "";
-    position: $position;
-    top: $top;
-    left: $left;
-    bottom: $bottom;
-    right: $right;
-}
-
-@mixin block($width: $width, $height: $width) {
-    width: $width;
-    height: $height;
-}
-
-@mixin truncate($text-width) {
-    max-width: $text-width;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-@mixin bg() {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 @mixin m($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
         @media #{inspect(map-get($breakpoints, $breakpoint))} {

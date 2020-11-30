@@ -13,13 +13,17 @@ html {
 
 body {
     margin: 0;
-    background-color: $background-color;
+    background: $background-color;
     color: $text;
     font-family: $font-family;
     font-weight: 400;
     line-height: 1.5;
     text-transform: uppercase;
     overflow: hidden;
+
+    @include m(sp) {
+        font-size: 0.7em;
+    }
 }
 
 h1,
@@ -58,6 +62,7 @@ a {
     color: $text;
     font-family: $font-family;
     font-size: 1rem;
+    text-transform: uppercase;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
@@ -83,9 +88,13 @@ a {
 
     &:disabled {
         background: $silver !important;
-        border: 1px solid $silver;
+        border: 1px solid transparent;
         color: $text;
         cursor: not-allowed;
+    }
+
+    @include m(sp) {
+        font-size: 0.7rem;
     }
 }
 
@@ -95,10 +104,15 @@ input {
     max-height: 2.5rem;
     padding: 0.7rem 1rem;
     font-family: $font-family;
+    font-size: 1rem;
     color: $text;
     background: $white none;
     border: 1px solid $silver;
     border-radius: 5px;
+
+    @include m(sp) {
+        font-size: 0.7em;
+    }
 }
 
 .hide {

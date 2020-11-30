@@ -5,6 +5,7 @@
     width: 100vw;
     height: 93vh;
     padding: 20px;
+    text-align: center;
 
     &__wrapper {
         background: $white;
@@ -12,13 +13,32 @@
         margin: 0 auto;
         padding: 20px;
         box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.3);
-        border-radius: 10px;
+        border-radius: 1rem;
+
+        @include m(sl) {
+            width: 500px;
+        }
+
+        @include m(sp) {
+            width: 100vw;
+        }
     }
 
     &__title,
     &__header {
         padding: 10px;
-        text-align: center;
+    }
+
+    &__title {
+        @include m(sp) {
+            font-size: 1.5em;
+        }
+    }
+
+    &__header {
+        @include m(sp) {
+            font-size: 0.8em;
+        }
     }
 
     &__content {
@@ -38,7 +58,14 @@
         max-width: 350px;
         max-height: 350px;
         border: 1px solid $silver;
-        background: $white;
+        border-radius: 5px;
+
+        @include m(sl) {
+            min-height: 250px;
+            min-width: 250px;
+            max-width: 250px;
+            max-height: 250px;
+        }
     }
 
     &__footer {
@@ -51,13 +78,9 @@
     &__input {
         display: flex;
         flex-direction: column;
-        margin-bottom: 10px;
-        font-size: 0.8rem;
 
         label {
-            display: inline-block;
-            max-width: 100%;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
     }
 }

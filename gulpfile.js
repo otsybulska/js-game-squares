@@ -13,6 +13,6 @@ const copyDependencies = require('./gulp/copyDependencies')
 
 const dev = gulp.parallel(pug2html, styles, scripts, fonts, img, svgSprite)
 
-const build = gulp.series(clean, dev, copyDependencies, fontsStyle)
+const build = gulp.series(clean, dev, fontsStyle) // copyDependencies
 
 module.exports.default = gulp.series(build, serve)
